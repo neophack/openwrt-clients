@@ -9,9 +9,9 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=njit8021xclient
 PKG_RELEASE:=testing
-PKG_VERSION:=1.3
-PKG_SOURCE_URL:=@SF/$(PKG_NAME)
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+PKG_VERSION:=v1.3.1
+PKG_SOURCE_URL:=https://github.com/liuqun/$(PKG_NAME)/archive/
+PKG_SOURCE:=$(PKG_VERSION).tar.gz
 PKG_MD5SUM:=1b19ac98ba90e18aff7aeefa431753e2
 
 include $(INCLUDE_DIR)/package.mk
@@ -20,7 +20,7 @@ define Package/njit8021xclient
   SECTION:=net
   CATEGORY:=Network
   TITLE:=NJIT 802.1X client program
-  URL:=http://liuqun.github.com/njit8021xclient
+  URL:=https://github.com/liuqun/njit8021xclient
   DEPENDS:=+libpcap
   PKG_BUILD_DEPENDS:=+libopenssl
 endef
