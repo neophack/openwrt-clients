@@ -7,10 +7,12 @@
 
 include $(TOPDIR)/rules.mk
 
+source_id:=neophack
 PKG_NAME:=njit8021xclient
 PKG_RELEASE:=testing
 PKG_VERSION:=v1.3.1
-PKG_SOURCE_URL:=https://github.com/liuqun/$(PKG_NAME)/archive/
+
+PKG_SOURCE_URL:=https://github.com/$(source_id)/$(PKG_NAME)/archive/
 PKG_SOURCE:=$(PKG_VERSION).tar.gz
 PKG_MD5SUM:=f7c4df3f4126b57b8f8ee92bdce011c7
 
@@ -20,7 +22,7 @@ define Package/njit8021xclient
   SECTION:=net
   CATEGORY:=Network
   TITLE:=NJIT 802.1X client program
-  URL:=https://github.com/liuqun/njit8021xclient
+  URL:=https://github.com/$(source_id)/$(PKG_NAME)
   DEPENDS:=+libpcap
   PKG_BUILD_DEPENDS:=+libopenssl
 endef
@@ -55,7 +57,7 @@ define Package/njit8021xclient-web
   SECTION:=net
   CATEGORY:=Network
   TITLE:=LuCI pages for NJIT 802.1X client
-  URL:=http://sourceforge.net/projects/njit8021xclient/
+  URL:=https://github.com/$(source_id)/luci-app-njitclient
   DEPENDS:=njit8021xclient
   PKGARCH:=all
 endef
