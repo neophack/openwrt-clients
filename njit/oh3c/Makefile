@@ -12,8 +12,8 @@ PKG_VERSION:=1.0
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=http://github.com/downloads/liuqun/OH3C/
-PKG_MD5SUM:=2e65cdd95524d2a63ada5cce3eb62e2a
+PKG_SOURCE_URL:=https://github.com/neophack/OH3C/archive/
+PKG_MD5SUM:=6b3a79f45e93bcc2b3fc5009fe5a81ec 
 
 PKG_BUILD_PARALLEL:=1
 
@@ -23,7 +23,7 @@ define Package/oh3c
   SECTION:=net
   CATEGORY:=Network
   TITLE:=OH3C 802.1X client
-  URL:=http://github.com/nanpuyue/oh3c
+  URL:=https://github.com/neophack/OH3C
   DEPENDS:=+python
 endef
 
