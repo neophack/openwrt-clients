@@ -18,7 +18,7 @@ define Package/sysu8021xclient
   SECTION:=net
   CATEGORY:=Network
   TITLE:=SYSU client by vrqq.srOOrz
-  URL:=http://github.com/liuqun/openwrt-feeds-njit/sysu/sysu8021xclient
+  URL:=https://github.com/liuqun/openwrt-clients/tree/master/sysu/sysu8021xclient
 endef
 
 define Package/sysu8021xclient/description
@@ -40,4 +40,3 @@ define Package/sysu8021xclient/install
 endef
 
 $(eval $(call BuildPackage,sysu8021xclient))
-
