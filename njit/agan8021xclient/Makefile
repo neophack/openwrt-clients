@@ -7,11 +7,13 @@
 
 include $(TOPDIR)/rules.mk
 
+source_id:=neophack
 PKG_NAME:=agan8021xclient
 PKG_VERSION:=1.2
 PKG_RELEASE:=testing
-PKG_SOURCE_URL:=@SF/$(PKG_NAME)
+
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://github.com/$(source_id)/$(PKG_NAME)/archive/
 PKG_MD5SUM:=d3df4ad26d1ed773e2a20d84036f8adc
 include $(INCLUDE_DIR)/package.mk
 
@@ -19,7 +21,7 @@ define Package/agan8021xclient
   SECTION:=net
   CATEGORY:=Network
   TITLE:=AGanNo2's 802.1X client program for H3C V2.20-0247
-  URL:=http://sourceforge.net/projects/agan8021xclient
+  URL:=https://github.com/$(source_id)/$(PKG_NAME)
   DEPENDS:=+libpcap +libnet1
   PKG_BUILD_DEPENDS:=+libopenssl
 endef
