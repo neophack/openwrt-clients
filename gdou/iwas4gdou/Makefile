@@ -11,9 +11,9 @@ include $(INCLUDE_DIR)/kernel.mk
 PKG_NAME:=iwas4gdou
 PKG_VERSION:=1.0
 PKG_RELEASE:=1
-PKG_SOURCE_URL:=https://github.com/neophack/iwas4gdou/archive/
+PKG_SOURCE_URL:=http://git.oschina.net/neophack/files/raw/master/
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_MD5SUM:=73fbc09b4b3664d9356ee74b5b274b99
+PKG_MD5SUM:=d58752879da64c44d8b01cf04ed51f63
 
 include $(INCLUDE_DIR)/package.mk
 
