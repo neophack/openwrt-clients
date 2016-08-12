@@ -11,8 +11,8 @@ include $(INCLUDE_DIR)/kernel.mk
 PKG_NAME:=iwas4gdou
 PKG_VERSION:=1.0
 PKG_RELEASE:=1
-PKG_SOURCE_URL:=https://github.com/downloads/liuqun/iwas4gdou/
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://codeload.github.com/liuqun/iwas4gdou/tar.gz/
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_MD5SUM:=73fbc09b4b3664d9356ee74b5b274b99
 
 include $(INCLUDE_DIR)/package.mk
