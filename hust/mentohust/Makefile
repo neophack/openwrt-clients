@@ -13,8 +13,7 @@ PKG_RELEASE:=openwrt20120923
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:= \
-  http://code.google.com/p/mentohust/ \
-  http://github.com/downloads/liuqun/mentohust/ \
+  https://github.com/neophack/openwrt-clients\
   $(NULL)
 PKG_MD5SUM:=4eecde99c0152fb2f9def285f57e252c
 
@@ -24,7 +23,7 @@ define Package/mentohust
   SECTION:=net
   CATEGORY:=Network
   TITLE:=OpenWRT 802.1X client for RuiJie V2/V3
-  URL:=http://github.com/microcaicai/mentohust
+  URL:=https://github.com/liuqun/mentohust
   DEPENDS:=
 endef
 
