@@ -7,14 +7,13 @@
 
 include $(TOPDIR)/rules.mk
 
+source_id:=neophack
 PKG_NAME:=mentohust
 PKG_VERSION:=0.3.1
 PKG_RELEASE:=openwrt20120923
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:= \
-  https://github.com/neophack/mentohust/archive/ \
-  $(NULL)
+PKG_SOURCE_URL:=https://github.com/$(source_id)/$(PKG_NAME)/archive/
 PKG_MD5SUM:=0493acb4cfd4fd6682566c4ffb526fc7
 
 include $(INCLUDE_DIR)/package.mk
@@ -23,7 +22,7 @@ define Package/mentohust
   SECTION:=net
   CATEGORY:=Network
   TITLE:=OpenWRT 802.1X client for RuiJie V2/V3
-  URL:=https://github.com/neophack/mentohust
+  URL:=https://github.com/$(source_id)/$(PKG_NAME)
   DEPENDS:=
 endef
 
