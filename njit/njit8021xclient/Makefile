@@ -7,32 +7,52 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=OH3C
-PKG_VERSION:=1.0
-PKG_RELEASE:=1
+source_id:=neophack
+PKG_NAME:=njit8021xclient
+PKG_RELEASE:=testing
+PKG_VERSION:=v1.3.1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/$(source_id)/$(PKG_NAME)/archive/
-PKG_MD5SUM:=6b3a79f45e93bcc2b3fc5009fe5a81ec 
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+PKG_MD5SUM:=f7c4df3f4126b57b8f8ee92bdce011c7
 
 PKG_BUILD_PARALLEL:=1
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/oh3c
+define Package/njit8021xclient
   SECTION:=net
   CATEGORY:=Network
-  TITLE:=OH3C 802.1X client
+  TITLE:=NJIT 802.1X client program
   URL:=https://github.com/$(source_id)/$(PKG_NAME)
-  DEPENDS:=+python
+  DEPENDS:=+libpcap
+  PKG_BUILD_DEPENDS:=+libopenssl
 endef
 
 define Build/Configure
 $(call Build/Configure/Default)
 endef
 
-define Package/oh3c/install
+define Package/njit8021xclient/install
 $(MAKE) -C $(PKG_BUILD_DIR) install DESTDIR=$(1)
 endef
 
-$(eval $(call BuildPackage,oh3c))
+define Package/njit8021xclient/conffiles
+/etc/config/njit8021xclient.conf
+endef
+
+define Package/luci-app-njitclient
+  SECTION:=net
+  CATEGORY:=Network
+  TITLE:=LuCI pages for NJIT 802.1X client
+  URL:=https://github.com/$(source_id)/luci-app-njitclient
+  DEPENDS:=njit8021xclient
+  PKGARCH:=all
+endef
+
+define Package/njit8021xclient/description
+  $(call Package/njit8021xclient/Default/description)
+  This package contains only the main program njit-client.
+endef
+
+$(eval $(call BuildPackage,njit8021xclient))
