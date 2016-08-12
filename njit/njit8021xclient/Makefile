@@ -12,7 +12,7 @@ PKG_RELEASE:=testing
 PKG_VERSION:=v1.3.1
 PKG_SOURCE_URL:=https://github.com/liuqun/$(PKG_NAME)/archive/
 PKG_SOURCE:=$(PKG_VERSION).tar.gz
-PKG_MD5SUM:=1b19ac98ba90e18aff7aeefa431753e2
+PKG_MD5SUM:=f7c4df3f4126b57b8f8ee92bdce011c7
 
 include $(INCLUDE_DIR)/package.mk
 
